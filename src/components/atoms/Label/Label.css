@@ -1,0 +1,8 @@
+.label {
+  display: block; /* Para que ocupe su propia línea si no usas flex */
+  font-family: sans-serif;
+  font-size: 0.875rem; /* 14px, un poco más pequeño que el input */
+  font-weight: 600;    /* Semibold */
+  color: #374151;      /* Gris oscuro profesional */
+  margin-bottom: 4px;  /* Un pequeño respiro antes del input */
+}

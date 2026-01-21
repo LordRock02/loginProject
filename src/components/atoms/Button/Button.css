@@ -1,0 +1,40 @@
+/* src/components/atoms/Button/Button.css */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100%; /* Ocupa todo el ancho disponible por defecto */
+  padding: 12px 24px;
+  
+  /* Usamos tus variables o colores fijos si no cargan */
+  background-color: #2563eb; /* Azul primario */
+  color: white;
+  
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #1d4ed8; /* Azul más oscuro */
+  transform: translateY(-1px); /* Efecto sutil de elevación */
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Estado Deshabilitado */
+.button:disabled {
+  background-color: #9ca3af; /* Gris */
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.7;
+}

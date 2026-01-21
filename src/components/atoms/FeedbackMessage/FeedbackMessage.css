@@ -1,0 +1,16 @@
+.feedback {
+  font-family: sans-serif;
+  font-size: 0.75rem; /* 12px, texto pequeño de ayuda */
+  margin-top: 4px;
+  display: block;
+}
+
+/* Modificador de Error (Rojo) */
+.feedback--error {
+  color: #ef4444; 
+}
+
+/* Modificador de Éxito (Verde - por si lo necesitas luego) */
+.feedback--success {
+  color: #22c55e;
+}
