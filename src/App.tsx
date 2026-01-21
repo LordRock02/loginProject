@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.tsx
+import { AuthTemplate } from './components/templates/AuthTemplate/AuthTemplate';
+import { authTemplateMock } from './components/templates/AuthTemplate/AuthTemplate.mock';
+
+import { InputGroup } from './components/molecules/InputGroup/InputGroup';
+import { inputGroupMock } from './components/molecules/InputGroup/InputGroup.mock';
+
+import { Button } from './components/atoms/Button/Button';
+import { buttonMock } from './components/atoms/Button/Button.mock';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    // 1. Usamos tu Template (El esqueleto)
+    <AuthTemplate {...authTemplateMock.default}>
+      
+      {/* 2. Simulamos el formulario usando tus Moléculas y Átomos */}
+      <form style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+        
+        {/* Inputs */}
+        <div>
+          <InputGroup {...inputGroupMock.default} />
+          {/* Simulamos un segundo input manual para password */}
+          <InputGroup label="Contraseña" id="password" type="password" placeholder="••••••••" />
+        </div>
+
+        {/* Botón */}
+        <Button {...buttonMock.primary} style={{ width: '100%' }} />
+
+      </form>
+
+    </AuthTemplate>
+  );
 }
 
-export default App
+export default App;
