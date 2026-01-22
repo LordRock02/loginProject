@@ -6,3 +6,52 @@
   width: 100%;
   text-align: left;
 }
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* El botón del ojo */
+.toggle-password-btn {
+  position: absolute;
+  right: 12px; /* Pegado a la derecha */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: #6b7280; /* Color gris del ícono */
+  transition: color 0.2s;
+}
+
+.toggle-password-btn:hover {
+  color: #2563eb; /* Azul al pasar el mouse */
+}
+
+/* Ajuste para que el texto no se monte encima del ícono si es muy largo */
+.input-with-icon {
+  padding-right: 40px !important; /* Espacio extra a la derecha */
+}
+
+.input-icon-start {
+  position: absolute;
+  left: 12px; /* Pegado a la izquierda */
+  top: 50%;
+  transform: translateY(-50%); /* Centrado vertical perfecto */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: #9ca3af; /* Gris suave */
+  pointer-events: none; /* IMPORTANTE: Permite hacer click "a través" del ícono para enfocar el input */
+  z-index: 10;
+}
+
+/* MODIFICADOR: Cuando el input tiene ícono a la izquierda */
+.input-with-start-icon {
+  padding-left: 40px !important; /* Espacio extra a la izquierda para que el texto no toque el ícono */
+}

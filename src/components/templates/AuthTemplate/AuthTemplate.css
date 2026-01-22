@@ -1,14 +1,14 @@
 .auth-template {
-  /* Ocupa toda la altura de la pantalla */
   min-height: 100vh;
   width: 100%;
   
-  /* Flexbox para centrar la tarjeta perfectamente */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   
-  background-color: #f3f4f6; /* Gris suave */
+  /* CAMBIO AQUÍ: Usamos el mismo color oscuro */
+  background-color: #0f172a; 
+  
   padding: 20px;
   box-sizing: border-box;
 }
@@ -16,11 +16,13 @@
 .auth-card {
   background-color: #ffffff;
   width: 100%;
-  max-width: 400px; /* Que no se estire demasiado en pantallas grandes */
+  max-width: 400px;
   
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+  
+  /* TIP PRO: En fondos oscuros, una sombra más fuerte ayuda a separar la tarjeta */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
   
   text-align: center;
 }
