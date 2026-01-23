@@ -2,7 +2,7 @@ import './Button.css';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
-  isLoading?: boolean; // Para mostrar "Cargando..." si quieres luego
+  isLoading?: boolean; 
 }
 
 export const Button = ({ label, isLoading, className = '', ...props }: ButtonProps) => {

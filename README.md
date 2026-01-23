@@ -1,73 +1,159 @@
-# React + TypeScript + Vite
+# ⚛️ React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación frontend moderna construida con **React**, **TypeScript** y **Vite**. Sigue buenas prácticas de arquitectura de software, utiliza componentes reutilizables y garantiza la calidad del código mediante pruebas unitarias exhaustivas.
 
-Currently, two official plugins are available:
+## ✨ Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación incluye las siguientes funcionalidades principales:
 
-## React Compiler
+-   🔐 **Autenticación:** Flujos de Login y Registro completos.
+-   🛡️ **Rutas Protegidas:** Gestión de accesos mediante `React Router DOM`.
+-   📡 **Conexión API:** Consumo de servicios backend optimizado con `Axios`.
+-   ✅ **Testing:** Pruebas unitarias configuradas con reporte de cobertura (Coverage).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+El stack tecnológico del proyecto incluye:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-   [React 18](https://reactjs.org/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Vite](https://vitejs.dev/)
+-   [React Router DOM](https://reactrouter.com/)
+-   [Axios](https://axios-http.com/)
+-   [Vitest](https://vitest.dev/)
+-   [Testing Library](https://testing-library.com/)
+-   [ESLint](https://eslint.org/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Instalación y Puesta en marcha
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Sigue estos pasos para ejecutar el proyecto en tu entorno local.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clonar el repositorio e instalar dependencias
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+# Clona el repositorio
+git clone <URL_DE_TU_REPOSITORIO>
+
+# Entra en la carpeta del proyecto
+cd nombre-del-proyecto
+
+# Instala las dependencias
+npm install
+
+Claro que sí. He revisado tu texto y he realizado varias mejoras:
+
+Corrección de formato: Había bloques de código sin cerrar (faltaban las comillas invertidas ```), lo que rompía la visualización.
+
+Organización: He estructurado mejor las secciones de instalación, scripts y testing para que sean más legibles.
+
+Limpieza: He resumido la parte de ESLint (en un README es mejor poner cómo ejecutar el comando que pegar toda la configuración del archivo) y he asumido que las dependencias ya están en el package.json (por lo que el usuario solo necesita npm install).
+
+Aquí tienes el código Markdown listo para copiar y pegar en tu archivo README.md.
+
+Markdown
+# ⚛️ React + TypeScript + Vite
+
+Este proyecto es una aplicación frontend moderna construida con **React**, **TypeScript** y **Vite**. Sigue buenas prácticas de arquitectura de software, utiliza componentes reutilizables y garantiza la calidad del código mediante pruebas unitarias exhaustivas.
+
+## ✨ Características
+
+La aplicación incluye las siguientes funcionalidades principales:
+
+-   🔐 **Autenticación:** Flujos de Login y Registro completos.
+-   🛡️ **Rutas Protegidas:** Gestión de accesos mediante `React Router DOM`.
+-   📡 **Conexión API:** Consumo de servicios backend optimizado con `Axios`.
+-   ✅ **Testing:** Pruebas unitarias configuradas con reporte de cobertura (Coverage).
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+El stack tecnológico del proyecto incluye:
+
+-   [React 18](https://reactjs.org/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Vite](https://vitejs.dev/)
+-   [React Router DOM](https://reactrouter.com/)
+-   [Axios](https://axios-http.com/)
+-   [Vitest](https://vitest.dev/)
+-   [Testing Library](https://testing-library.com/)
+-   [ESLint](https://eslint.org/)
+
+---
+
+## 🚀 Instalación y Puesta en marcha
+
+Sigue estos pasos para ejecutar el proyecto en tu entorno local.
+
+### 1. Clonar el repositorio e instalar dependencias
+
+```bash
+# Clona el repositorio
+git clone <URL_DE_TU_REPOSITORIO>
+
+# Entra en la carpeta del proyecto
+cd nombre-del-proyecto
+
+# Instala las dependencias
+npm install
+
+
+### 2. Configurar Variables de Entorno
+
+El proyecto utiliza variables de entorno para la conexión con el backend. Crea un archivo `.env` en la raíz del proyecto basándote en el siguiente ejemplo:
+
+```env
+VITE_API_BASE_URL=http://localhost:8080
+
+
+### 3. Ejecutar en modo desarrollo
+Inicia el servidor local de Vite:
+
+Bash
+npm run dev
+
+
+## 🧪 Pruebas Unitarias (Testing)
+El proyecto cuenta con una suite de pruebas robusta utilizando **Vitest** y **@testing-library/react**.
+
+Las pruebas cubren:
+
+* 📄 **Páginas:** `LoginPage`, `RegisterPage`.
+* 🧩 **Componentes:** Componentes de UI reutilizables.
+* 🔒 **Rutas:** Validación de `PrivateRoute`.
+* 🌐 **Servicios:** Mocking y pruebas de peticiones `Axios`.
+
+
+# Ejecutar las pruebas
+
+Para correr todos los tests definidos en el proyecto:
+
+```bash
+npm run test
+
+
+## 📊 Reporte de Cobertura (Coverage)
+
+Para ejecutar las pruebas y generar un reporte detallado de qué porcentaje del código está siendo probado:
+
+```bash
+npm run test:coverage
+
+Este comando generará:
+
+* **Resultado en consola.**
+* Una carpeta **`coverage/`** en la raíz.
+* Un archivo **`coverage/lcov.info`** (útil para integración continua).
+
+
+### Visualizar el reporte gráficamente
+
+Puedes ver el reporte detallado abriendo el archivo HTML generado en tu navegador:
+
+```bash
+# Abre este archivo en Chrome/Firefox/Edge
+coverage/index.html
