@@ -15,5 +15,5 @@ export interface RegisterUserRequest {
 export const registerUser = async (
   payload: RegisterUserRequest
 ): Promise<void> => {
-  await axiosInstance.post('/usuarios', payload);
+  await axiosInstance.post('api/v1/usuarios', payload);
 };

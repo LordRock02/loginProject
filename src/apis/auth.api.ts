@@ -12,8 +12,11 @@ export interface LoginRequest {
  * Login response from backend
  */
 export interface LoginResponse {
+  accessToken: string;
+  refreshToken: string;
   nombre: string;
 }
+
 
 /**
  * Executes login request against backend
@@ -22,7 +25,7 @@ export const loginUser = async (
   payload: LoginRequest
 ): Promise<LoginResponse> => {
   const { data } = await axiosInstance.post<LoginResponse>(
-    '/auth/login',
+    '/api/v1/auth/login',
     payload
   );
 
