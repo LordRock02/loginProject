@@ -8,10 +8,8 @@ import { authTemplateMock } from '../templates/AuthTemplate/AuthTemplate.mock';
 import { InputGroup } from '../molecules/InputGroup/InputGroup';
 import { Button } from '../atoms/Button/Button';
 
-// Tu servicio (asegúrate de que la ruta sea correcta)
 import { loginUser } from '../../apis'; 
-// NOTA: Si tu archivo se llama 'apis', cambia la línea de arriba por:
-// import { loginUser } from '../../apis';
+
 
 export const LoginPage = () => {
   // 1. Estados para los datos
@@ -35,8 +33,9 @@ export const LoginPage = () => {
       const response = await loginUser({ email, password });
 
       // Guardamos info y redirigimos
-      // (Asegúrate de que 'response.nombre' exista en tu backend, o usa response.data.token)
-      localStorage.setItem('userName', response.nombre || 'Usuario'); 
+      localStorage.setItem('accessToken', response.accessToken);
+      localStorage.setItem('refreshToken', response.refreshToken);
+      localStorage.setItem('userName', response.nombre);
       navigate('/home');
 
     } catch (err) {
